@@ -7,7 +7,7 @@ function f () {
   then
     if [[ -z "$2" || "$2" == -* ]]
     then
-    error "Please enter both remote and branch if specifying them."
+    echo "Please enter both remote and branch if specifying them."
     exit 1
     fi
     REMOTE_NAME="$1"
