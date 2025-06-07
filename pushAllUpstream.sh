@@ -18,8 +18,7 @@ function f () {
   while getopts 'm:' flag; do
     case "${flag}" in
       m)
-        COMMIT_MESSAGE="${OPTARG}"
-        echo "Tried to set COMMIT_MESSAGE";;
+        COMMIT_MESSAGE="${OPTARG}";;
       *)
         echo "${flag} is not a valid flag." 
         exit 1;;
