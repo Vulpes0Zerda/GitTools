@@ -29,10 +29,12 @@ pushup = "!sh ~/.scripts/GitTools/pushAllUpstream.sh"
 #### pushAllUpstream.sh
 Adds all files and directories to the pending changes, commits them with or without a message and pushes them to a remote branch.
 ```git
-git pushup <remoteName> <branchName> -m "msg"
-
-pushup - the alias to the script, set in the .gitconfig file
-<remoteName> (optional) - name of the remote repository, set for the project, in case no default-upstream was set
-<branchName> (optional) - name of the remote branch, set for the project, in case no default-upstream was set
--m "msg" (optional) - flag to add the message to the commit
+git pushup [<remoteName>] [<branchName>] [-m "commit message"]
 ```
+
+| Argument | Description |
+|----------|-------------|
+| `pushup` | The alias to the script, set in your `.gitconfig` file |
+| `<remoteName>` | *(optional)* Name of the remote repository. Required only if no default upstream is set |
+| `<branchName>` | *(optional)* Name of the remote branch. Required only if no default upstream is set |
+| `-m "msg"` | *(optional)* Commit message to use for the commit |
